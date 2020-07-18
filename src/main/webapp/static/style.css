@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+    width: 100vh;
+    /*background: lightblue url(../img/background.jpg) no-repeat fixed center;*/
+    /*background-image:url(../img/book.png);*/
+    /*background-size: auto;*/
+    /*background-size: cover;*/
+    background-color: lightgrey;
+}
+
+.main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.userForm {
+    width: content-box;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
