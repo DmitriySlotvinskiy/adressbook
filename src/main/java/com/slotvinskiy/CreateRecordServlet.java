@@ -27,7 +27,9 @@ public class CreateRecordServlet extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String address = request.getParameter("address");
         boolean isCreated = false;
-        if (!firstName.isBlank() && !lastName.isBlank() && !address.isBlank()) {
+        String pattern = "[A-Z][a-zA-Z-]+";
+        if (firstName.matches(pattern) && lastName.matches(pattern)
+                && !firstName.isBlank() && !lastName.isBlank() && !address.isBlank()) {
             isCreated = addressBookDao.create(firstName, lastName, address);
         }
 

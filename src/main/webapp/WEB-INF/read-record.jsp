@@ -21,17 +21,17 @@
         <table>
             <tr>
                 <td>First name:</td>
-                <td><%=firstName%>
+                <td><strong><%=firstName%></strong>
                 </td>
             </tr>
             <tr>
                 <td>Last name:</td>
-                <td><%=lastName%>
+                <td><strong><%=lastName%></strong>
                 </td>
             </tr>
             <tr>
                 <td>Address:</td>
-                <td><%=Address%>
+                <td><strong><%=Address%></strong>
                 </td>
             </tr>
         </table>
