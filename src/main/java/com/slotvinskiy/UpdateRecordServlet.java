@@ -28,8 +28,9 @@ public class UpdateRecordServlet extends HttpServlet {
         if (addressBookDao.read(firstName, lastName) == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             request.getRequestDispatcher("/WEB-INF/no-such-record-error.jsp").forward(request, response);
+        } else {
+            request.getRequestDispatcher("/WEB-INF/update-record.jsp").forward(request, response);
         }
-        request.getRequestDispatcher("/WEB-INF/update-record.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -30,8 +30,9 @@ public class ReadRecordServlet extends HttpServlet {
         if (address == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             request.getRequestDispatcher("/WEB-INF/no-such-record-error.jsp").forward(request, response);
+        } else {
+            request.setAttribute("address", address);
+            requestDispatcher.forward(request, response);
         }
-        request.setAttribute("address", address);
-        requestDispatcher.forward(request, response);
     }
 }
